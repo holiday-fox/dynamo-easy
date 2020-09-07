@@ -36,8 +36,12 @@ export function buildUpdateExpression(
   existingValueNames: string[] | undefined,
   metadata: Metadata<any> | undefined,
 ): UpdateExpression {
-  // metadata get rid of undefined values
-  values = deepFilter(values, (value) => value !== undefined) || []
+  // we need to be able handle setting empty arrays on set operations
+  // this is a temp hack for now
+  if (!(operation.action === 'set' && Array.isArray(values[0]) && values[0].length === 0)) {
+    // metadata get rid of undefined values
+    values = deepFilter(values, (value) => value !== undefined) || []
+  }
 
   // load property metadata if model metadata was provided
   let propertyMetadata: PropertyMetadata<any> | undefined

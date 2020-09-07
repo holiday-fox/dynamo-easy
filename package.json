@@ -1,6 +1,6 @@
 {
-  "name": "@shiftcoders/dynamo-easy",
-  "version": "0.0.0",
+  "name": "@holiday-fox/dynamo-easy",
+  "version": "1.0.4",
   "description": "DynamoDB client for NodeJS and browser with a fluent api to build requests. We take care of the type mapping between JS and DynamoDB, customizable trough typescript decorators.",
   "keywords": [
     "api",
@@ -25,7 +25,7 @@
   "homepage": "https://shiftcode.gitbook.io/dynamo-easy/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shiftcode/dynamo-easy"
+    "url": "https://github.com/holiday-fox/dynamo-easy"
   },
   "license": "MIT",
   "author": "Michael Wittwer <michael.wittwer@shiftcode.ch>",
